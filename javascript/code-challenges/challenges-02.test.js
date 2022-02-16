@@ -8,7 +8,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 ------------------------------------------------------------------------------------------------ */
 
-const raisedToTheThird = (arr) => { arr.map(value => Math.pow(value,3));};
+const raisedToTheThird = (arr) => {
+  let newArr = [];
+  arr.forEach(num => newArr.push(Math.pow(num,3)));
+  return Array;
+
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
