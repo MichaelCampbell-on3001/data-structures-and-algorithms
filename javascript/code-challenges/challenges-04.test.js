@@ -22,7 +22,7 @@ function lower(str) {
 }
 
 const updateAnimal = (arr, callback) => {
-  // Solution code here...
+  // Solution code here~
   const newArray = arr.map(callback);
   return newArray;
 };
@@ -36,7 +36,8 @@ For example: 'Cat' would come before 'apple'
 ------------------------------------------------------------------------------------------------ */
 
 const sortNames = (arr) => {
-  // Solution code here...
+  // Solution code ~
+  return arr.sort();
 };
 
 /* ------------------------------------------------------------------------------------------------
