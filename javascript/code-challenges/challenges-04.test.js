@@ -50,6 +50,11 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
+  function sortedNumber(a,b){
+    return a - b;
+  }
+  return arr.sort(sortedNumber);
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
