@@ -44,9 +44,7 @@ Write a function named countNumberOfElements that, given an array as input, uses
 Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
-const countNumberOfElements = (arr) => {
-  // Solution code here...
-};
+const countNumberOfElements = (arr) => arr.reduce(acc => acc + 1, 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -106,6 +104,11 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  const newArray = arr.reduce((acc, cur) => {
+    acc.push(cur.name);
+    return acc;
+  }, []);
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,9 +119,7 @@ Write a function named reversedString that takes in a string and returns a strin
 Note: You must use reduce for this challenge. You may not use the built-in .reverse() string method.
 ------------------------------------------------------------------------------------------------ */
 
-const reversedString = (str) => {
-  // Solution code here...
-};
+const reversedString = (str) => str.split('').reduce((acc, cur) => cur + acc, '');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
