@@ -75,9 +75,7 @@ For example:
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => {
-  // Solution code here...
-};
+const isNum = (input) => /[0=9]/.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -86,9 +84,7 @@ Write a function named containsWorld that takes in a string or number of any len
 
 ------------------------------------------------------------------------------------------------ */
 
-const containsWorld = (input) => {
-  // Solution code here...
-};
+const containsWorld = (input) => /world/.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -100,6 +96,9 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
+  let regex = /\b[A-Z][a-z]+/g;
+  let results = str.match(regex) || [];
+  return results;
 };
 
 /* ------------------------------------------------------------------------------------------------
