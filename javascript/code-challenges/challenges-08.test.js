@@ -52,7 +52,15 @@ let characters = [
   }
 ];
 
-const sortByChildren = (charArray) => charArray.sort((a,b) => a.children.length - b.children.length);
+const sortByChildren = (charArray) => charArray.sort((a,b) => {
+  if (a.children.length > b.children.length){
+    return 1;
+  }
+  else if (a.children.length < b.children.length){
+    return -1;
+  }
+  else {return a.house > b.house ? 1 : -1;}
+});
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -75,7 +83,10 @@ For example:
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => /[0=9]/.test(input);
+const isNum = (input) => {
+  const comparision = /[0-9]/;
+  return comparision.test(input);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
