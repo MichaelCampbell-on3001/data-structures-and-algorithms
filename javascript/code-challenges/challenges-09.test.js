@@ -111,11 +111,7 @@ const characters = [
   },
 ];
 
-const getHouses = (arr) => {
-  let houses = [];
-  // Solution code here...
-  return houses;
-};
+const getHouses = (arr) => arr.map((value) => value.house);
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -129,10 +125,10 @@ hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenValues = (arr, character) => {
+const hasChildrenValues = (arr, character) => (
   // Solution code here...
-
-};
+  Object.values(arr.reduce((acc, cur) => cur.name === character ? acc = cur : acc, {})) [2] instanceof Array
+);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
