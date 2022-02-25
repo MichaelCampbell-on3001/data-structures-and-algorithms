@@ -34,6 +34,9 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
+  const valueArray = Object.values(obj);
+  let answer = valueArray.includes(value) ? true : false;
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,9 +58,7 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 ------------------------------------------------------------------------------------------------ */
 
-const updateNumbers = (obj) => {
-  // Solution code here...
-};
+const updateNumbers = (obj) => Object.entries(obj).map((value) => value.join(': '));
 
 
 
