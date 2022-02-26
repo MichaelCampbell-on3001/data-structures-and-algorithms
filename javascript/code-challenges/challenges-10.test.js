@@ -47,6 +47,8 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
+  let newArray = matrix.map((value) => value.reduce((a,b) => a + b, 0));
+  return newArray.reduce((a,b) => a + b, 0);
 };
 
 
